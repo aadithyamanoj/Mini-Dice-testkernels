@@ -1,0 +1,597 @@
+{
+  "dice_cta_desc": {
+    "cta_id": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "kernel_desc": {
+      "grid_size": {
+        "x": 4,
+        "y": 1,
+        "z": 1
+      },
+      "kernel_id": 259,
+      "start_pc": 4096,
+      "thread_count": 16
+    }
+  },
+  "pgraph_metadata": [
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 0,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          0
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4096
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 512,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          1
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4352
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 1024,
+        "bitstream_length": 652,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 3,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 4,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4608
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 1536,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 16,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4864
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 2048,
+        "bitstream_length": 347,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 1
+        },
+        "in_regs_bitmap": 20,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 1,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 5120
+    }
+  ],
+  "runtime": {
+    "_notes": [
+      "SRAD srad: 4 serial CTAs * 16 threads = 64 elements processed.",
+      "Single-resident-CTA model: FPGA controller reprograms array-base",
+      "CSRs between dispatches (see per_cta_csr_overrides). Kernel reads",
+      "REGS0 = local_tid (0..15) every CTA -- no global thread id needed.",
+      "Shifted CSRs (+16/CTA): csrX0, csrX1, csrX2."
+    ],
+    "axi": {
+      "expected_writes": [
+        {
+          "addr": 256,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 257,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 258,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 259,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 260,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 261,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 262,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 263,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 264,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 265,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 266,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 267,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 268,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 269,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 270,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 271,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 272,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 273,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 274,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 275,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 276,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 277,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 278,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 279,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 280,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 281,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 282,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 283,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 284,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 285,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 286,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 287,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 288,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 289,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 290,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 291,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 292,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 293,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 294,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 295,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 296,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 297,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 298,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 299,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 300,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 301,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 302,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 303,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 304,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 305,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 306,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 307,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 308,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 309,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 310,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 311,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 312,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 313,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 314,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 315,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 316,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 317,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 318,
+          "data": 65409,
+          "strb": 3
+        },
+        {
+          "addr": 319,
+          "data": 65409,
+          "strb": 3
+        }
+      ]
+    },
+    "csr_values": {
+      "csrX0": 1,
+      "csrX1": 128,
+      "csrX2": 256,
+      "csrX3": 1,
+      "csrX4": 1,
+      "csrX5": 1,
+      "csrX6": 0,
+      "csrX7": 0
+    },
+    "per_cta_csr_overrides": [
+      {
+        "csr_values": {
+          "csrX0": 1,
+          "csrX1": 128,
+          "csrX2": 256
+        },
+        "cta_id": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "csr_values": {
+          "csrX0": 17,
+          "csrX1": 144,
+          "csrX2": 272
+        },
+        "cta_id": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "csr_values": {
+          "csrX0": 33,
+          "csrX1": 160,
+          "csrX2": 288
+        },
+        "cta_id": {
+          "x": 2,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "csr_values": {
+          "csrX0": 49,
+          "csrX1": 176,
+          "csrX2": 304
+        },
+        "cta_id": {
+          "x": 3,
+          "y": 0,
+          "z": 0
+        }
+      }
+    ]
+  },
+  "stage_artifacts": [
+    {
+      "fasm_path": "srad_load_Jc.fasm",
+      "kernel": "srad_load_Jc",
+      "notes": [
+        "load d_I[tid] (Jc) into R0."
+      ]
+    },
+    {
+      "fasm_path": "srad_load_N.fasm",
+      "kernel": "srad_load_N",
+      "notes": [
+        "load d_I[north_neighbor[tid]] into R1.",
+        "Host stages csrX1 to point at a north-shifted view of d_I."
+      ]
+    },
+    {
+      "fasm_path": "srad_compute_dN.fasm",
+      "kernel": "srad_compute_dN",
+      "notes": [
+        "R2 = R0 - R1 (dN_loc = Jc - north_neighbor)."
+      ]
+    },
+    {
+      "fasm_path": "srad_gen_dN_addr.fasm",
+      "kernel": "srad_gen_dN_addr",
+      "notes": [
+        "R4 = csrX2 + tid*csrX3 (d_dN store address)."
+      ]
+    },
+    {
+      "fasm_path": "srad_store_dN.fasm",
+      "kernel": "srad_store_dN",
+      "notes": [
+        "mem[R4] = R2."
+      ]
+    }
+  ]
+}

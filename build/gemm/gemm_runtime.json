@@ -1,0 +1,386 @@
+{
+  "axi": {
+    "expected_writes": [
+      {
+        "addr": 528,
+        "data": 54272,
+        "strb": 3
+      },
+      {
+        "addr": 529,
+        "data": 56196,
+        "strb": 3
+      },
+      {
+        "addr": 530,
+        "data": 58128,
+        "strb": 3
+      },
+      {
+        "addr": 531,
+        "data": 60068,
+        "strb": 3
+      },
+      {
+        "addr": 532,
+        "data": 62016,
+        "strb": 3
+      },
+      {
+        "addr": 533,
+        "data": 63972,
+        "strb": 3
+      },
+      {
+        "addr": 534,
+        "data": 400,
+        "strb": 3
+      },
+      {
+        "addr": 535,
+        "data": 2372,
+        "strb": 3
+      },
+      {
+        "addr": 536,
+        "data": 4352,
+        "strb": 3
+      },
+      {
+        "addr": 537,
+        "data": 6340,
+        "strb": 3
+      },
+      {
+        "addr": 538,
+        "data": 8336,
+        "strb": 3
+      },
+      {
+        "addr": 539,
+        "data": 10340,
+        "strb": 3
+      },
+      {
+        "addr": 540,
+        "data": 12352,
+        "strb": 3
+      },
+      {
+        "addr": 541,
+        "data": 14372,
+        "strb": 3
+      },
+      {
+        "addr": 542,
+        "data": 16400,
+        "strb": 3
+      },
+      {
+        "addr": 543,
+        "data": 18436,
+        "strb": 3
+      },
+      {
+        "addr": 544,
+        "data": 20480,
+        "strb": 3
+      },
+      {
+        "addr": 545,
+        "data": 22532,
+        "strb": 3
+      },
+      {
+        "addr": 546,
+        "data": 24592,
+        "strb": 3
+      },
+      {
+        "addr": 547,
+        "data": 26660,
+        "strb": 3
+      },
+      {
+        "addr": 548,
+        "data": 28736,
+        "strb": 3
+      },
+      {
+        "addr": 549,
+        "data": 30820,
+        "strb": 3
+      },
+      {
+        "addr": 550,
+        "data": 32912,
+        "strb": 3
+      },
+      {
+        "addr": 551,
+        "data": 35012,
+        "strb": 3
+      },
+      {
+        "addr": 552,
+        "data": 37120,
+        "strb": 3
+      },
+      {
+        "addr": 553,
+        "data": 39236,
+        "strb": 3
+      },
+      {
+        "addr": 554,
+        "data": 41360,
+        "strb": 3
+      },
+      {
+        "addr": 555,
+        "data": 43492,
+        "strb": 3
+      },
+      {
+        "addr": 556,
+        "data": 45632,
+        "strb": 3
+      },
+      {
+        "addr": 557,
+        "data": 47780,
+        "strb": 3
+      },
+      {
+        "addr": 558,
+        "data": 49936,
+        "strb": 3
+      },
+      {
+        "addr": 559,
+        "data": 52100,
+        "strb": 3
+      },
+      {
+        "addr": 560,
+        "data": 54272,
+        "strb": 3
+      },
+      {
+        "addr": 561,
+        "data": 56452,
+        "strb": 3
+      },
+      {
+        "addr": 562,
+        "data": 58640,
+        "strb": 3
+      },
+      {
+        "addr": 563,
+        "data": 60836,
+        "strb": 3
+      },
+      {
+        "addr": 564,
+        "data": 63040,
+        "strb": 3
+      },
+      {
+        "addr": 565,
+        "data": 65252,
+        "strb": 3
+      },
+      {
+        "addr": 566,
+        "data": 1936,
+        "strb": 3
+      },
+      {
+        "addr": 567,
+        "data": 4164,
+        "strb": 3
+      },
+      {
+        "addr": 568,
+        "data": 6400,
+        "strb": 3
+      },
+      {
+        "addr": 569,
+        "data": 8644,
+        "strb": 3
+      },
+      {
+        "addr": 570,
+        "data": 10896,
+        "strb": 3
+      },
+      {
+        "addr": 571,
+        "data": 13156,
+        "strb": 3
+      },
+      {
+        "addr": 572,
+        "data": 15424,
+        "strb": 3
+      },
+      {
+        "addr": 573,
+        "data": 17700,
+        "strb": 3
+      },
+      {
+        "addr": 574,
+        "data": 19984,
+        "strb": 3
+      },
+      {
+        "addr": 575,
+        "data": 22276,
+        "strb": 3
+      },
+      {
+        "addr": 576,
+        "data": 24576,
+        "strb": 3
+      },
+      {
+        "addr": 577,
+        "data": 26884,
+        "strb": 3
+      },
+      {
+        "addr": 578,
+        "data": 29200,
+        "strb": 3
+      },
+      {
+        "addr": 579,
+        "data": 31524,
+        "strb": 3
+      },
+      {
+        "addr": 580,
+        "data": 33856,
+        "strb": 3
+      },
+      {
+        "addr": 581,
+        "data": 36196,
+        "strb": 3
+      },
+      {
+        "addr": 582,
+        "data": 38544,
+        "strb": 3
+      },
+      {
+        "addr": 583,
+        "data": 40900,
+        "strb": 3
+      },
+      {
+        "addr": 584,
+        "data": 43264,
+        "strb": 3
+      },
+      {
+        "addr": 585,
+        "data": 45636,
+        "strb": 3
+      },
+      {
+        "addr": 586,
+        "data": 48016,
+        "strb": 3
+      },
+      {
+        "addr": 587,
+        "data": 50404,
+        "strb": 3
+      },
+      {
+        "addr": 588,
+        "data": 52800,
+        "strb": 3
+      },
+      {
+        "addr": 589,
+        "data": 55204,
+        "strb": 3
+      },
+      {
+        "addr": 590,
+        "data": 57616,
+        "strb": 3
+      },
+      {
+        "addr": 591,
+        "data": 60036,
+        "strb": 3
+      }
+    ]
+  },
+  "csr_values": {
+    "csrX0": 16,
+    "csrX1": 272,
+    "csrX2": 528,
+    "csrX3": 64,
+    "csrX4": 128,
+    "csrX5": 192,
+    "csrX6": 0,
+    "csrX7": 0
+  },
+  "per_cta_csr_overrides": [
+    {
+      "csr_values": {
+        "csrX0": 16,
+        "csrX1": 272,
+        "csrX2": 528
+      },
+      "cta_id": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "csr_values": {
+        "csrX0": 32,
+        "csrX1": 288,
+        "csrX2": 544
+      },
+      "cta_id": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "csr_values": {
+        "csrX0": 48,
+        "csrX1": 304,
+        "csrX2": 560
+      },
+      "cta_id": {
+        "x": 2,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "csr_values": {
+        "csrX0": 64,
+        "csrX1": 320,
+        "csrX2": 576
+      },
+      "cta_id": {
+        "x": 3,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ]
+}

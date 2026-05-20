@@ -1,0 +1,6 @@
+// Auto-generated CTA descriptor ($readmemh format)
+// dice_cta_desc_t packed width: 120 bits (padded to 120 bits)
+// grid_size=(4,1,1), thread_count=16, start_pc=4096
+// cta_id=(0,0,0)
+
+@00000000 000200004000301000000000000000

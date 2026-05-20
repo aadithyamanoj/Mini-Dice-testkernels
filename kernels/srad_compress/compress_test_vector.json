@@ -1,0 +1,552 @@
+{
+  "dice_cta_desc": {
+    "cta_id": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "kernel_desc": {
+      "grid_size": {
+        "x": 4,
+        "y": 1,
+        "z": 1
+      },
+      "kernel_id": 258,
+      "start_pc": 4096,
+      "thread_count": 16
+    }
+  },
+  "pgraph_metadata": [
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 0,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          0
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4096
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 512,
+        "bitstream_length": 652,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 1,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 1,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4352
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 1024,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 16,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4608
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 1536,
+        "bitstream_length": 347,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 1
+        },
+        "in_regs_bitmap": 17,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 1,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4864
+    }
+  ],
+  "runtime": {
+    "_notes": [
+      "SRAD compress: 4 serial CTAs * 16 threads = 64 elements processed.",
+      "Single-resident-CTA model: FPGA controller reprograms array-base",
+      "CSRs between dispatches (see per_cta_csr_overrides). Kernel reads",
+      "REGS0 = local_tid (0..15) every CTA -- no global thread id needed.",
+      "Shifted CSRs (+16/CTA): csrX0."
+    ],
+    "axi": {
+      "expected_writes": [
+        {
+          "addr": 1,
+          "data": 1,
+          "strb": 3
+        },
+        {
+          "addr": 2,
+          "data": 2,
+          "strb": 3
+        },
+        {
+          "addr": 3,
+          "data": 3,
+          "strb": 3
+        },
+        {
+          "addr": 4,
+          "data": 4,
+          "strb": 3
+        },
+        {
+          "addr": 5,
+          "data": 5,
+          "strb": 3
+        },
+        {
+          "addr": 6,
+          "data": 6,
+          "strb": 3
+        },
+        {
+          "addr": 7,
+          "data": 7,
+          "strb": 3
+        },
+        {
+          "addr": 8,
+          "data": 8,
+          "strb": 3
+        },
+        {
+          "addr": 9,
+          "data": 9,
+          "strb": 3
+        },
+        {
+          "addr": 10,
+          "data": 10,
+          "strb": 3
+        },
+        {
+          "addr": 11,
+          "data": 11,
+          "strb": 3
+        },
+        {
+          "addr": 12,
+          "data": 12,
+          "strb": 3
+        },
+        {
+          "addr": 13,
+          "data": 13,
+          "strb": 3
+        },
+        {
+          "addr": 14,
+          "data": 14,
+          "strb": 3
+        },
+        {
+          "addr": 15,
+          "data": 15,
+          "strb": 3
+        },
+        {
+          "addr": 16,
+          "data": 16,
+          "strb": 3
+        },
+        {
+          "addr": 17,
+          "data": 17,
+          "strb": 3
+        },
+        {
+          "addr": 18,
+          "data": 18,
+          "strb": 3
+        },
+        {
+          "addr": 19,
+          "data": 19,
+          "strb": 3
+        },
+        {
+          "addr": 20,
+          "data": 20,
+          "strb": 3
+        },
+        {
+          "addr": 21,
+          "data": 21,
+          "strb": 3
+        },
+        {
+          "addr": 22,
+          "data": 22,
+          "strb": 3
+        },
+        {
+          "addr": 23,
+          "data": 23,
+          "strb": 3
+        },
+        {
+          "addr": 24,
+          "data": 24,
+          "strb": 3
+        },
+        {
+          "addr": 25,
+          "data": 25,
+          "strb": 3
+        },
+        {
+          "addr": 26,
+          "data": 26,
+          "strb": 3
+        },
+        {
+          "addr": 27,
+          "data": 27,
+          "strb": 3
+        },
+        {
+          "addr": 28,
+          "data": 28,
+          "strb": 3
+        },
+        {
+          "addr": 29,
+          "data": 29,
+          "strb": 3
+        },
+        {
+          "addr": 30,
+          "data": 30,
+          "strb": 3
+        },
+        {
+          "addr": 31,
+          "data": 31,
+          "strb": 3
+        },
+        {
+          "addr": 32,
+          "data": 32,
+          "strb": 3
+        },
+        {
+          "addr": 33,
+          "data": 33,
+          "strb": 3
+        },
+        {
+          "addr": 34,
+          "data": 34,
+          "strb": 3
+        },
+        {
+          "addr": 35,
+          "data": 35,
+          "strb": 3
+        },
+        {
+          "addr": 36,
+          "data": 36,
+          "strb": 3
+        },
+        {
+          "addr": 37,
+          "data": 37,
+          "strb": 3
+        },
+        {
+          "addr": 38,
+          "data": 38,
+          "strb": 3
+        },
+        {
+          "addr": 39,
+          "data": 39,
+          "strb": 3
+        },
+        {
+          "addr": 40,
+          "data": 40,
+          "strb": 3
+        },
+        {
+          "addr": 41,
+          "data": 41,
+          "strb": 3
+        },
+        {
+          "addr": 42,
+          "data": 42,
+          "strb": 3
+        },
+        {
+          "addr": 43,
+          "data": 43,
+          "strb": 3
+        },
+        {
+          "addr": 44,
+          "data": 44,
+          "strb": 3
+        },
+        {
+          "addr": 45,
+          "data": 45,
+          "strb": 3
+        },
+        {
+          "addr": 46,
+          "data": 46,
+          "strb": 3
+        },
+        {
+          "addr": 47,
+          "data": 47,
+          "strb": 3
+        },
+        {
+          "addr": 48,
+          "data": 48,
+          "strb": 3
+        },
+        {
+          "addr": 49,
+          "data": 49,
+          "strb": 3
+        },
+        {
+          "addr": 50,
+          "data": 50,
+          "strb": 3
+        },
+        {
+          "addr": 51,
+          "data": 51,
+          "strb": 3
+        },
+        {
+          "addr": 52,
+          "data": 52,
+          "strb": 3
+        },
+        {
+          "addr": 53,
+          "data": 53,
+          "strb": 3
+        },
+        {
+          "addr": 54,
+          "data": 54,
+          "strb": 3
+        },
+        {
+          "addr": 55,
+          "data": 55,
+          "strb": 3
+        },
+        {
+          "addr": 56,
+          "data": 56,
+          "strb": 3
+        },
+        {
+          "addr": 57,
+          "data": 57,
+          "strb": 3
+        },
+        {
+          "addr": 58,
+          "data": 58,
+          "strb": 3
+        },
+        {
+          "addr": 59,
+          "data": 59,
+          "strb": 3
+        },
+        {
+          "addr": 60,
+          "data": 60,
+          "strb": 3
+        },
+        {
+          "addr": 61,
+          "data": 61,
+          "strb": 3
+        },
+        {
+          "addr": 62,
+          "data": 62,
+          "strb": 3
+        },
+        {
+          "addr": 63,
+          "data": 63,
+          "strb": 3
+        },
+        {
+          "addr": 64,
+          "data": 64,
+          "strb": 3
+        }
+      ]
+    },
+    "csr_values": {
+      "csrX0": 1,
+      "csrX1": 128,
+      "csrX2": 256,
+      "csrX3": 1,
+      "csrX4": 1,
+      "csrX5": 1,
+      "csrX6": 0,
+      "csrX7": 0
+    },
+    "per_cta_csr_overrides": [
+      {
+        "csr_values": {
+          "csrX0": 1
+        },
+        "cta_id": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "csr_values": {
+          "csrX0": 17
+        },
+        "cta_id": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "csr_values": {
+          "csrX0": 33
+        },
+        "cta_id": {
+          "x": 2,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "csr_values": {
+          "csrX0": 49
+        },
+        "cta_id": {
+          "x": 3,
+          "y": 0,
+          "z": 0
+        }
+      }
+    ]
+  },
+  "stage_artifacts": [
+    {
+      "fasm_path": "comp_load_I.fasm",
+      "kernel": "comp_load_I",
+      "notes": [
+        "load d_I into R0."
+      ]
+    },
+    {
+      "fasm_path": "comp_scale.fasm",
+      "kernel": "comp_scale",
+      "notes": [
+        "R0 = R0 * csrX4. Placeholder for log(x)*255."
+      ]
+    },
+    {
+      "fasm_path": "comp_gen_store_addr.fasm",
+      "kernel": "comp_gen_store_addr",
+      "notes": [
+        "R4 = csrX0 + tid*csrX3."
+      ]
+    },
+    {
+      "fasm_path": "comp_store_I.fasm",
+      "kernel": "comp_store_I",
+      "notes": [
+        "mem[R4] = R0."
+      ]
+    }
+  ]
+}

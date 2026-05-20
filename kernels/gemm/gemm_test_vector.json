@@ -1,0 +1,927 @@
+{
+  "dice_cta_desc": {
+    "cta_id": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "kernel_desc": {
+      "grid_size": {
+        "x": 4,
+        "y": 1,
+        "z": 1
+      },
+      "kernel_id": 768,
+      "start_pc": 4096,
+      "thread_count": 16
+    }
+  },
+  "pgraph_metadata": [
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 0,
+        "bitstream_length": 652,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          0
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4096
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 512,
+        "bitstream_length": 652,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          1
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4352
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 1024,
+        "bitstream_length": 652,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 3,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 16,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4608
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 1536,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          0
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4864
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 2048,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          1
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 5120
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 2560,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 19,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 16,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 5376
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 3072,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          0
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 5632
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 3584,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          1
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 5888
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 4096,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 19,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 16,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 6144
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 4608,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          0
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 6400
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 5120,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          1
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 6656
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 5632,
+        "bitstream_length": 1012,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 19,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 16,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 6912
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 6144,
+        "bitstream_length": 652,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 32,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 7168
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 6656,
+        "bitstream_length": 347,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 1
+        },
+        "in_regs_bitmap": 48,
+        "lat": 2,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 1,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 7424
+    }
+  ],
+  "runtime": {
+    "_notes": [
+      "GEMM C = A*B, A is 8x4, B is 4x8, C is 8x8.",
+      "Grid = 4 serial CTAs * 16 threads = 64 outputs.",
+      "Single-resident-CTA model: only one CTA runs at a time, so the FPGA",
+      "controller re-stages CSRs between dispatches. csrX0/1/2 shift by 16",
+      "elements per CTA (the per_cta_csr_overrides table); csrX3..5 (k-stride",
+      "constants) stay fixed. The kernel reads REGS0 = local_tid (0..15) on",
+      "every CTA -- no global thread id needed.",
+      "Host pre-shuffles A,B into thread-major layouts:",
+      "  A_packed[k*TOTAL + g] = A[g/N][k]",
+      "  B_packed[k*TOTAL + g] = B[k][g%N]",
+      "where g = cta_id.x * 16 + local_tid (folded into the per-CTA csrX0/1/2).",
+      "Thread g's k-th A access lands at: csrX0_for_this_cta + k_stride + REGS0."
+    ],
+    "axi": {
+      "expected_writes": [
+        {
+          "addr": 528,
+          "data": 54272,
+          "strb": 3
+        },
+        {
+          "addr": 529,
+          "data": 56196,
+          "strb": 3
+        },
+        {
+          "addr": 530,
+          "data": 58128,
+          "strb": 3
+        },
+        {
+          "addr": 531,
+          "data": 60068,
+          "strb": 3
+        },
+        {
+          "addr": 532,
+          "data": 62016,
+          "strb": 3
+        },
+        {
+          "addr": 533,
+          "data": 63972,
+          "strb": 3
+        },
+        {
+          "addr": 534,
+          "data": 400,
+          "strb": 3
+        },
+        {
+          "addr": 535,
+          "data": 2372,
+          "strb": 3
+        },
+        {
+          "addr": 536,
+          "data": 4352,
+          "strb": 3
+        },
+        {
+          "addr": 537,
+          "data": 6340,
+          "strb": 3
+        },
+        {
+          "addr": 538,
+          "data": 8336,
+          "strb": 3
+        },
+        {
+          "addr": 539,
+          "data": 10340,
+          "strb": 3
+        },
+        {
+          "addr": 540,
+          "data": 12352,
+          "strb": 3
+        },
+        {
+          "addr": 541,
+          "data": 14372,
+          "strb": 3
+        },
+        {
+          "addr": 542,
+          "data": 16400,
+          "strb": 3
+        },
+        {
+          "addr": 543,
+          "data": 18436,
+          "strb": 3
+        },
+        {
+          "addr": 544,
+          "data": 20480,
+          "strb": 3
+        },
+        {
+          "addr": 545,
+          "data": 22532,
+          "strb": 3
+        },
+        {
+          "addr": 546,
+          "data": 24592,
+          "strb": 3
+        },
+        {
+          "addr": 547,
+          "data": 26660,
+          "strb": 3
+        },
+        {
+          "addr": 548,
+          "data": 28736,
+          "strb": 3
+        },
+        {
+          "addr": 549,
+          "data": 30820,
+          "strb": 3
+        },
+        {
+          "addr": 550,
+          "data": 32912,
+          "strb": 3
+        },
+        {
+          "addr": 551,
+          "data": 35012,
+          "strb": 3
+        },
+        {
+          "addr": 552,
+          "data": 37120,
+          "strb": 3
+        },
+        {
+          "addr": 553,
+          "data": 39236,
+          "strb": 3
+        },
+        {
+          "addr": 554,
+          "data": 41360,
+          "strb": 3
+        },
+        {
+          "addr": 555,
+          "data": 43492,
+          "strb": 3
+        },
+        {
+          "addr": 556,
+          "data": 45632,
+          "strb": 3
+        },
+        {
+          "addr": 557,
+          "data": 47780,
+          "strb": 3
+        },
+        {
+          "addr": 558,
+          "data": 49936,
+          "strb": 3
+        },
+        {
+          "addr": 559,
+          "data": 52100,
+          "strb": 3
+        },
+        {
+          "addr": 560,
+          "data": 54272,
+          "strb": 3
+        },
+        {
+          "addr": 561,
+          "data": 56452,
+          "strb": 3
+        },
+        {
+          "addr": 562,
+          "data": 58640,
+          "strb": 3
+        },
+        {
+          "addr": 563,
+          "data": 60836,
+          "strb": 3
+        },
+        {
+          "addr": 564,
+          "data": 63040,
+          "strb": 3
+        },
+        {
+          "addr": 565,
+          "data": 65252,
+          "strb": 3
+        },
+        {
+          "addr": 566,
+          "data": 1936,
+          "strb": 3
+        },
+        {
+          "addr": 567,
+          "data": 4164,
+          "strb": 3
+        },
+        {
+          "addr": 568,
+          "data": 6400,
+          "strb": 3
+        },
+        {
+          "addr": 569,
+          "data": 8644,
+          "strb": 3
+        },
+        {
+          "addr": 570,
+          "data": 10896,
+          "strb": 3
+        },
+        {
+          "addr": 571,
+          "data": 13156,
+          "strb": 3
+        },
+        {
+          "addr": 572,
+          "data": 15424,
+          "strb": 3
+        },
+        {
+          "addr": 573,
+          "data": 17700,
+          "strb": 3
+        },
+        {
+          "addr": 574,
+          "data": 19984,
+          "strb": 3
+        },
+        {
+          "addr": 575,
+          "data": 22276,
+          "strb": 3
+        },
+        {
+          "addr": 576,
+          "data": 24576,
+          "strb": 3
+        },
+        {
+          "addr": 577,
+          "data": 26884,
+          "strb": 3
+        },
+        {
+          "addr": 578,
+          "data": 29200,
+          "strb": 3
+        },
+        {
+          "addr": 579,
+          "data": 31524,
+          "strb": 3
+        },
+        {
+          "addr": 580,
+          "data": 33856,
+          "strb": 3
+        },
+        {
+          "addr": 581,
+          "data": 36196,
+          "strb": 3
+        },
+        {
+          "addr": 582,
+          "data": 38544,
+          "strb": 3
+        },
+        {
+          "addr": 583,
+          "data": 40900,
+          "strb": 3
+        },
+        {
+          "addr": 584,
+          "data": 43264,
+          "strb": 3
+        },
+        {
+          "addr": 585,
+          "data": 45636,
+          "strb": 3
+        },
+        {
+          "addr": 586,
+          "data": 48016,
+          "strb": 3
+        },
+        {
+          "addr": 587,
+          "data": 50404,
+          "strb": 3
+        },
+        {
+          "addr": 588,
+          "data": 52800,
+          "strb": 3
+        },
+        {
+          "addr": 589,
+          "data": 55204,
+          "strb": 3
+        },
+        {
+          "addr": 590,
+          "data": 57616,
+          "strb": 3
+        },
+        {
+          "addr": 591,
+          "data": 60036,
+          "strb": 3
+        }
+      ]
+    },
+    "csr_values": {
+      "csrX0": 16,
+      "csrX1": 272,
+      "csrX2": 528,
+      "csrX3": 64,
+      "csrX4": 128,
+      "csrX5": 192,
+      "csrX6": 0,
+      "csrX7": 0
+    },
+    "per_cta_csr_overrides": [
+      {
+        "csr_values": {
+          "csrX0": 16,
+          "csrX1": 272,
+          "csrX2": 528
+        },
+        "cta_id": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "csr_values": {
+          "csrX0": 32,
+          "csrX1": 288,
+          "csrX2": 544
+        },
+        "cta_id": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "csr_values": {
+          "csrX0": 48,
+          "csrX1": 304,
+          "csrX2": 560
+        },
+        "cta_id": {
+          "x": 2,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "csr_values": {
+          "csrX0": 64,
+          "csrX1": 320,
+          "csrX2": 576
+        },
+        "cta_id": {
+          "x": 3,
+          "y": 0,
+          "z": 0
+        }
+      }
+    ]
+  },
+  "stage_artifacts": [
+    {
+      "fasm_path": "gemm_load_A_k0.fasm",
+      "kernel": "gemm_load_A_k0",
+      "notes": [
+        "addr = csrX0 + (0*TOTAL via CSR) + REGS0; LDST writes A_packed[k=0,g] to R0."
+      ]
+    },
+    {
+      "fasm_path": "gemm_load_B_k0.fasm",
+      "kernel": "gemm_load_B_k0",
+      "notes": [
+        "addr = csrX1 + (0*TOTAL via CSR) + REGS0; LDST writes B_packed[k=0,g] to R1."
+      ]
+    },
+    {
+      "fasm_path": "gemm_mul_k0.fasm",
+      "kernel": "gemm_mul_k0",
+      "notes": [
+        "R4 = R0 * R1 (init accumulator with the k=0 product)."
+      ]
+    },
+    {
+      "fasm_path": "gemm_load_A_k1.fasm",
+      "kernel": "gemm_load_A_k1",
+      "notes": [
+        "addr = csrX0 + (1*TOTAL via CSR) + REGS0; LDST writes A_packed[k=1,g] to R0."
+      ]
+    },
+    {
+      "fasm_path": "gemm_load_B_k1.fasm",
+      "kernel": "gemm_load_B_k1",
+      "notes": [
+        "addr = csrX1 + (1*TOTAL via CSR) + REGS0; LDST writes B_packed[k=1,g] to R1."
+      ]
+    },
+    {
+      "fasm_path": "gemm_mac_k1.fasm",
+      "kernel": "gemm_mac_k1",
+      "notes": [
+        "R4 = R0 * R1 + R4  (accumulate k=1 product)."
+      ]
+    },
+    {
+      "fasm_path": "gemm_load_A_k2.fasm",
+      "kernel": "gemm_load_A_k2",
+      "notes": [
+        "addr = csrX0 + (2*TOTAL via CSR) + REGS0; LDST writes A_packed[k=2,g] to R0."
+      ]
+    },
+    {
+      "fasm_path": "gemm_load_B_k2.fasm",
+      "kernel": "gemm_load_B_k2",
+      "notes": [
+        "addr = csrX1 + (2*TOTAL via CSR) + REGS0; LDST writes B_packed[k=2,g] to R1."
+      ]
+    },
+    {
+      "fasm_path": "gemm_mac_k2.fasm",
+      "kernel": "gemm_mac_k2",
+      "notes": [
+        "R4 = R0 * R1 + R4  (accumulate k=2 product)."
+      ]
+    },
+    {
+      "fasm_path": "gemm_load_A_k3.fasm",
+      "kernel": "gemm_load_A_k3",
+      "notes": [
+        "addr = csrX0 + (3*TOTAL via CSR) + REGS0; LDST writes A_packed[k=3,g] to R0."
+      ]
+    },
+    {
+      "fasm_path": "gemm_load_B_k3.fasm",
+      "kernel": "gemm_load_B_k3",
+      "notes": [
+        "addr = csrX1 + (3*TOTAL via CSR) + REGS0; LDST writes B_packed[k=3,g] to R1."
+      ]
+    },
+    {
+      "fasm_path": "gemm_mac_k3.fasm",
+      "kernel": "gemm_mac_k3",
+      "notes": [
+        "R4 = R0 * R1 + R4  (accumulate k=3 product)."
+      ]
+    },
+    {
+      "fasm_path": "gemm_gen_C_addr.fasm",
+      "kernel": "gemm_gen_C_addr",
+      "notes": [
+        "R5 = csrX2 + REGS0 (output address for thread g)."
+      ]
+    },
+    {
+      "fasm_path": "gemm_store_C.fasm",
+      "kernel": "gemm_store_C",
+      "notes": [
+        "mem[R5] = R4 (write C[g] = accumulated dot product)."
+      ]
+    }
+  ]
+}
