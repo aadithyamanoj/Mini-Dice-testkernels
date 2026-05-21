@@ -1,0 +1,259 @@
+4        
+0 bsg_defines.sv
+0 /data/eda_tools/synopsys/tools/vcs/X-2025.06/etc/systemverilog/bsg_defines.sv
+0 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/bsg_defines.sv
+0 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/alu/bsg_defines.sv
+79
++acc+3
++incdir+/data/amanoj3/dora/dora.py/external/basejump_stl/bsg_misc
++incdir+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl
++incdir+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/alu
++itf+/data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/vcsdp_lite.tab
++libext+.sv+.v
++lint=none
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/data/eda_tools/synopsys/tools/vcs/X-2025.06/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -LDFLAGS -Wl,--no-as-needed -rdynamic
+-Mobjects= /data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/libvirsim.so /data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/liberrorinf.so /data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/libsnpsmalloc.so /data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/libvfs.so
+-Mout=/data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv
+-Msaverestoreobj=/data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/data/eda_tools/synopsys/tools/vcs/X-2025.06/include
+-Mxllcflags=
+-Xhdlxmropt
+-debug_access+all
+-full64
+-gen_obj
+-load
+-o /data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv
+-picarchive
+-q
+-suppress=VPI-CT-NS
+-sverilog
+-sverilog
+-timescale=1ns/1ps
+-top
+-y
+-y
+-y
+/data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/bin/vcs1fe
+/data/amanoj3/dora/local/pypoetry/virtualenvs/dora-WTcrZLFS-py3.12/lib/python3.12/site-packages/cocotb/libs/libcocotbvpi_vcs.so
+dice_top
+/data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv
+/data/amanoj3/dora/dora.py/external/basejump_stl/bsg_misc
+/data/amanoj3/dora/dora.py/external/basejump_stl/bsg_mem
+/data/amanoj3/dora/dora.py/external/basejump_stl/bsg_dataflow
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/dice_top.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/mini_dice.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/pe.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/phi_mux_pred16_16b.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/pred_nonzero_16b.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/pred_to_data_16b.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/reg_16b.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sb.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sb_xbar_tap_16b.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_data_d16_contexts_1.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_data_d1_contexts_1.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_data_d2_contexts_1.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_data_d3_contexts_1.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_data_d50_contexts_1.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_data_d72_contexts_1.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_delim.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sw_2_16b.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sw_3_16b.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sw_4_16b.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sw_5_16b.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sw_8_16b.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/xbar_data_in.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/xbar_data_out.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/xbar_mem_addr.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/xbar_mem_data.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/alu/alu_add.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/alu/alu_mul.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/alu/fu_int16_add_int16_sub_int16_mul.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/alu/fu_int16_add_int16_sub_int16_mul_control.sv
+/data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/alu/mux_generic.sv
+123
+which_declare=declare -f
+_LMFILES__modshare=/usr/share/Modules/modulefiles/genus/25.1:1:/usr/share/Modules/modulefiles/vcs/X-2025.06:1
+_LMFILES_=/usr/share/Modules/modulefiles/genus/25.1:/usr/share/Modules/modulefiles/vcs/X-2025.06
+XDG_SESSION_ID=136
+XDG_RUNTIME_DIR=/run/user/1312115
+XDG_DATA_DIRS=/homes/amanoj3/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_CACHE_HOME=/data/amanoj3/.cache
+VSCODE_SERVER_DIR=/data/amanoj3/.vscode-server
+VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
+VSCODE_IPC_HOOK_CLI=/run/user/1312115/vscode-ipc-9c1df2ce-5696-48fc-aeea-ab741af3bb3e.sock
+VSCODE_GIT_IPC_HANDLE=/run/user/1312115/vscode-git-5c958128de.sock
+VSCODE_GIT_ASKPASS_NODE=/data/amanoj3/.vscode-server/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/node
+VSCODE_GIT_ASKPASS_MAIN=/data/amanoj3/.vscode-server/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass-main.js
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS=/data/amanoj3/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-38ff2f552ec033d2.txt
+VSCODE_AGENT_FOLDER=/data/amanoj3/.vscode-agent
+VMR_MODE_FLAG=64
+VIRTUAL_ENV=/data/amanoj3/dora/local/pypoetry/virtualenvs/dora-WTcrZLFS-py3.12
+VCS_PYTHON3=/data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/bin/Python3/bin/python3
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_INTERNAL_CONVERTEDLIBS=
+VCS_HOME=/data/eda_tools/synopsys/tools/vcs/X-2025.06
+VCS_EXEC_DONE=1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64
+TMUX_PANE=%2
+TMUX=/tmp/tmux-1312115/default,3855081,2
+TERM_PROGRAM_VERSION=1.109.5
+TERM_PROGRAM=vscode
+S_COLORS=auto
+SSL_CERT_FILE=/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+SSL_CERT_DIR=/etc/pki/tls/certs
+SSH_CONNECTION=10.102.18.4 61366 128.95.141.68 22
+SSH_CLIENT=10.102.27.165 58701 22
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SNPS_VCS_PYTHON3=/data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/bin/Python3/bin/python3
+SNPS_VCS_CLANG_PATH=/data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/clang
+SNPS_INTERNAL_VCS_LINUX_OS=linux
+SETTLE_CYCLES=8
+SDKMAN_PLATFORM=linuxx64
+SDKMAN_DIR=/data/amanoj3/.sdkman
+SDKMAN_CANDIDATES_DIR=/data/amanoj3/.sdkman/candidates
+SDKMAN_CANDIDATES_API=https://api.sdkman.io/2
+SDKMAN_BROKER_API=https://broker.sdkman.io
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+SBT_HOME=/data/amanoj3/.sdkman/candidates/sbt/current
+REGS0_SWEEP=0..15
+PYTHON_BASIC_REPL=1
+PYTHONSTARTUP=/data/amanoj3/.vscode-server/.vscode-server/data/User/workspaceStorage/3f495ab83d8618321210f10003de70fe-1/ms-python.python/pythonrc.py
+PYENV_VERSION=3.12.13
+PYENV_SHELL=bash
+PYENV_ROOT=/data/amanoj3/.pyenv
+PYDEVD_DISABLE_FILE_VALIDATION=1
+POETRY_CACHE_DIR=/data/amanoj3/dora/local/pypoetry
+PATH_modshare=/data/amanoj3/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts:1:/usr/bin:1:/data/amanoj3/.vscode-server/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/bin/remote-cli:1:/data/amanoj3/local/firtool-1.43.0/bin:1:/data/amanoj3/.pyenv/shims:1:/homes/amanoj3/.local/bin:1:/homes/amanoj3/bin:1:/usr/share/Modules/bin:1:/usr/local/bin:1:/opt/dell/srvadmin/bin:1:/data/amanoj3/.sdkman/candidates/sbt/current/bin:1:/usr/condabin:1:/usr/lib64/ccache:1:/data/amanoj3/.pyenv/bin:1:/usr/sbin:1:/data/eda_tools/synopsys/tools/vcs/X-2025.06/bin:1:/data/amanoj3/.sdkman/candidates/java/current/bin:1:/usr/local/sbin:1
+OVA_UUM=0
+NoDefaultCurrentDirectoryInExePath=1
+MODULES_RUN_QUARANTINE=LD_LIBRARY_PATH LD_PRELOAD
+MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
+MODULESHOME=/usr/share/Modules
+MODULEPATH_modshare=/usr/share/Modules/modulefiles:2:/etc/modulefiles:2:/usr/share/modulefiles:2
+MODULEPATH=/etc/scl/modulefiles:/etc/scl/modulefiles:/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles
+MANPATH_modshare=:1:/data/eda_tools/cadence/DDI251/GENUS251/share/tcltools/man:1
+LOADEDMODULES_modshare=vcs/X-2025.06:1:genus/25.1:1
+LOADEDMODULES=genus/25.1:vcs/X-2025.06
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KRB5CCNAME=KCM:
+JAVA_HOME=/data/amanoj3/.sdkman/candidates/java/current
+HISTCONTROL=ignoredups
+GUESTFISH_RESTORE=\e[0m
+GUESTFISH_PS1=\[\e[1;32m\]><fs>\[\e[0;31m\] 
+GUESTFISH_OUTPUT=\e[0m
+GUESTFISH_INIT=\e[1;34m
+GIT_EDITOR=true
+GIT_ASKPASS=/data/amanoj3/.vscode-server/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass.sh
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1312115/bus
+CSR_X7=0
+CSR_X6=0
+CSR_X5=1
+CSR_X4=1
+CSR_X3=1
+CSR_X2=256
+CSR_X1=128
+CSR_X0=1
+COREPACK_ENABLE_AUTO_PIN=0
+CONDA_SHLVL=0
+COLORTERM=truecolor
+CLAUDE_EFFORT=xhigh
+CLAUDE_CODE_SSE_PORT=11884
+CLAUDE_CODE_SESSION_ID=01236c96-fc7b-4f05-ae98-6b2e2f5e7cff
+CLAUDE_CODE_EXECPATH=/home/amanoj3/.local/share/claude/versions/2.1.145
+CLAUDE_CODE_ENTRYPOINT=cli
+CLAUDECODE=1
+CDS_LIC_FILE=27006@cadencels.s.uw.edu
+BUNDLED_DEBUGPY_PATH=/data/amanoj3/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy
+BITSTREAM_BITS=1074
+BIN_PATH=/data/amanoj3/Mini-Dice-testkernels/build/srad_srad2/srad2_store_I.bin
+BASH_FUNC_which%%=() {  ( alias;
+BASH_FUNC_switchml%%=() {  typeset swfound=1;
+BASH_FUNC_scl%%=() {  if [ "$1" = "load" -o "$1" = "unload" ]; then
+BASH_FUNC_module%%=() {  unset _mlshdbg;
+BASH_FUNC_ml%%=() {  module ml "$@"
+BASH_FUNC__module_raw%%=() {  unset _mlshdbg;
+AI_AGENT=claude-code_2-1-145_agent
+ typeset swname='compatibility';
+ typeset swfound=0;
+ if [ "${_mlv}" = "${_mlv##*[!A-Za-z0-9_]}" -a "${_mlv}" = "${_mlv#[0-9]}" ]; then
+ if [ "${MODULES_USE_COMPAT_VERSION:-0}" = '1' ]; then
+ if [ "${MODULES_SILENT_SHELL_DEBUG:-0}" = '1' ]; then
+ _mlstatus=$?;
+ _mlshdbg=''
+ _mlrv="MODULES_RUNENV_${_mlv}";
+ _mlre="${_mlre:-}${_mlv}='`eval 'echo ${'$_mlrv':-}'`' ";
+ _mlIFS=$IFS;
+ MODULES_USE_COMPAT_VERSION=1;
+ IFS=$_mlIFS;
+0
+3
+1776636767840 /data/amanoj3/dora/dora.py/external/basejump_stl/bsg_dataflow
+1776636767847 /data/amanoj3/dora/dora.py/external/basejump_stl/bsg_mem
+1776636767853 /data/amanoj3/dora/dora.py/external/basejump_stl/bsg_misc
+37
+1776636767 /data/amanoj3/dora/dora.py/external/basejump_stl/bsg_misc/bsg_reduce.sv
+1776636767 /data/amanoj3/dora/dora.py/external/basejump_stl/bsg_misc/bsg_dff_reset_en.sv
+1776636767 /data/amanoj3/dora/dora.py/external/basejump_stl/bsg_misc/bsg_dff_async_reset.sv
+1776636767 /data/amanoj3/dora/dora.py/external/basejump_stl/bsg_misc/bsg_buf.sv
+1776636767 /data/amanoj3/dora/dora.py/external/basejump_stl/bsg_misc/bsg_defines.sv
+1748765798 /data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/packages/snps_msv_nettype_pkg/AN.DB
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/alu/mux_generic.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/alu/fu_int16_add_int16_sub_int16_mul_control.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/alu/fu_int16_add_int16_sub_int16_mul.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/alu/alu_mul.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/alu/alu_add.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/xbar_mem_data.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/xbar_mem_addr.sv
+1779253265 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/xbar_data_out.sv
+1779253265 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/xbar_data_in.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sw_8_16b.sv
+1779253265 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sw_5_16b.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sw_4_16b.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sw_3_16b.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sw_2_16b.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_delim.sv
+1779253265 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_data_d72_contexts_1.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_data_d50_contexts_1.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_data_d3_contexts_1.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_data_d2_contexts_1.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_data_d1_contexts_1.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/scanchain_data_d16_contexts_1.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sb_xbar_tap_16b.sv
+1779253265 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/sb.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/reg_16b.sv
+1779253265 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/pred_to_data_16b.sv
+1777919105 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/pred_nonzero_16b.sv
+1779253265 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/phi_mux_pred16_16b.sv
+1779253265 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/pe.sv
+1779253265 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/mini_dice.sv
+1779253265 /data/amanoj3/dora/examples/devices/dice-isca/mini_dice/static-build/rtl/dice_top.sv
+1748747165 /data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/vcsdp_lite.tab
+4
+1748749132 /data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/libvirsim.so
+1748748097 /data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/liberrorinf.so
+1748748087 /data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/libsnpsmalloc.so
+1748748085 /data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/libvfs.so
+1779323838 /data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv.daidir
+-1 partitionlib

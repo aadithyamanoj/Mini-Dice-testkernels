@@ -3,6 +3,7 @@
 # Source: CGRA-Solve mapping
 # Compiler architecture: benchmarks/architectures/mini_dice_static/II_1/compiler_arch.json
 
+dice_array.pe_7_7.alu_inst[1:0] = 2'b10
 dice_array.pe_7_7.i_sw_alu_inst_A[1:0] = 2'b11
 dice_array.pe_7_7.i_sw_alu_inst_B[1:0] = 2'b10
 dice_array.pe_7_7.i_sw_pe_SE_o[1:0] = 2'b01
@@ -11,3 +12,5 @@ dice_array.sb_8_6.i_sw_xbar_tap_NE_data_i[2:0] = 3'b001
 dice_array.sb_8_8.i_sw_xbar_tap_E_data_i[2:0] = 3'b101
 dice_array.sb_8_8.i_sw_xbar_tap_NW_data_i[2:0] = 3'b000
 dice_array.sb_8_8.i_sw_xbar_tap_W_data_i[2:0] = 3'b001
+xbar_data_in_inst[49:0] = 50'b10100000000000000000000000000000000000000000000000
+xbar_data_out_inst[71:0] = 72'b000000000000000000000000000000000000000000000000000000000000000000001001

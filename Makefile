@@ -83,17 +83,19 @@ FASMS_$(1) := $$(wildcard $(KERNELS_DIR)/$(1)/*.fasm)
 BINS_$(1)  := $$(patsubst $(KERNELS_DIR)/$(1)/%.fasm,$(BUILD_DIR)/$(1)/%.bin,$$(FASMS_$(1)))
 JSON_$(1)  := $$(firstword $$(wildcard $(KERNELS_DIR)/$(1)/*_test_vector.json))
 
+# dora-run cd's into dora.py/ before exec, so all script paths and --out
+# targets must be absolute. $(CURDIR) anchors them to the testkernels root.
 $(BUILD_DIR)/$(1)/%.bin: $(KERNELS_DIR)/$(1)/%.fasm $(WORKSPACE_PKL)
 	@mkdir -p $$(@D)
-	$(FASM_TO_BIN) --fasm $$< --workspace $(WORKSPACE_PKL) --out $$@
+	$(FASM_TO_BIN) --fasm $$(CURDIR)/$$< --workspace $(WORKSPACE_PKL) --out $$(CURDIR)/$$@
 
 $(BUILD_DIR)/$(1)/$(1)_bitstream.mem: $$(BINS_$(1)) $$(JSON_$(1))
 	@mkdir -p $$(@D)
-	$(BINS_TO_MEM) --json $$(JSON_$(1)) --bins-dir $(BUILD_DIR)/$(1) --out $$@
+	$(BINS_TO_MEM) --json $$(CURDIR)/$$(JSON_$(1)) --bins-dir $$(CURDIR)/$(BUILD_DIR)/$(1) --out $$(CURDIR)/$$@
 
 $(BUILD_DIR)/$(1)/$(1)_meta.mem $(BUILD_DIR)/$(1)/$(1)_cta_desc.mem $(BUILD_DIR)/$(1)/$(1)_runtime.json: $$(JSON_$(1))
 	@mkdir -p $(BUILD_DIR)/$(1)
-	$(JSON_TO_META) --json $$(JSON_$(1)) --out-dir $(BUILD_DIR)/$(1) --stem $(1)
+	$(JSON_TO_META) --json $$(CURDIR)/$$(JSON_$(1)) --out-dir $$(CURDIR)/$(BUILD_DIR)/$(1) --stem $(1)
 
 endef
 
