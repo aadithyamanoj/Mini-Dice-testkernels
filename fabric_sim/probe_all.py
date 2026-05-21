@@ -34,7 +34,8 @@ from typing import Optional
 FABRIC_SIM   = Path(__file__).parent.resolve()
 TESTKERNELS  = FABRIC_SIM.parent
 KERNELS_DIR  = TESTKERNELS / "kernels"
-BUILD_DIR    = TESTKERNELS / "build"
+BUILD_DIR    = TESTKERNELS / "build"      # legacy/output dir, kept for completeness
+BIN_DIR_ROOT = TESTKERNELS / "kernels"    # .bin files now live next to .fasm here
 DORA_RUN     = Path("/data/amanoj3/dora/scripts/dora-run")
 MODULE_BASH  = Path("/usr/share/Modules/init/bash")
 
@@ -318,7 +319,7 @@ def main() -> int:
         print(f"\n=== kernel: {k}  ({len(meta['pgraph_metadata'])} p-graphs) ===")
         for entry, stage in zip(meta["pgraph_metadata"], meta.get("stage_artifacts", [])):
             stem    = Path(stage.get("fasm_path", "")).stem or stage.get("kernel")
-            bin_p   = BUILD_DIR / k / f"{stem}.bin"
+            bin_p   = BIN_DIR_ROOT / k / f"{stem}.bin"
             if not bin_p.exists():
                 print(f"  {stem:<25}  MISSING {bin_p}")
                 results.append({"kernel": k, "stage": stem, "status": "MISSING-BIN"})

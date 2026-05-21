@@ -11,27 +11,27 @@ into the `.mem` files Mini_Dice's TB consumes.
 Mini-Dice-testkernels/
 ├── Makefile
 ├── README.md
-├── kernels/
+├── kernels/                      (all committed source — both human-readable + precompiled)
 │   ├── srad_prepare/   srad_extract/  srad_compress/  srad_srad/  srad_srad2/
 │   ├── nn_cuda/
 │   └── gemm/
-│       ├── *.fasm                       (per-p-graph CGRA-Solve output)
+│       ├── *.fasm                       (per-p-graph CGRA-Solve output, source of truth)
+│       ├── *.bin                        (prebuilt bitstreams committed alongside fasms)
 │       └── *_test_vector.json           (kernel descriptor + pgraph metadata)
 ├── scripts/
-│   ├── fasm_to_bin.py            (dora bitgen wrapper: fasm -> .bin)
 │   ├── bins_to_bitstream_mem.py  (combine per-p-graph .bin -> bitstream.mem)
 │   ├── json_to_meta_mem.py       (JSON -> meta.mem + cta_desc.mem + runtime.json)
-│   └── fill_expected_writes.py   (per-kernel sim -> populate axi.expected_writes)
+│   ├── fill_expected_writes.py   (per-kernel sim -> populate axi.expected_writes)
+│   └── fasm_to_bin.py            (dora bitgen wrapper; ONLY used by `make regen-bins`)
 ├── patches/                      (ready-to-copy multi-CTA support for Mini_Dice TB)
 │   ├── dpi_dice_core_runtime.cpp  -> Mini_Dice/tb/cgra_core/dice_core/
 │   └── tb_chip_top.sv             -> Mini_Dice/tb/mini_dice/
-└── build/                        (created by `make`)
+└── build/                        (created by `make`, gitignored)
     └── <kernel>/
-        ├── *.bin                          (one per p-graph FASM)
-        ├── <kernel>_bitstream.mem         (sequential pgraph bitstreams)
-        ├── <kernel>_meta.mem              (sequential pgraph_meta_t entries)
-        ├── <kernel>_cta_desc.mem          (single dice_cta_desc_t @0)
-        └── <kernel>_runtime.json          (csr_values + per_cta overrides + axi)
+        ├── <kernel>_bitstream.mem        (sequential pgraph bitstreams)
+        ├── <kernel>_meta.mem             (sequential pgraph_meta_t entries)
+        ├── <kernel>_cta_desc.mem         (single dice_cta_desc_t @0)
+        └── <kernel>_runtime.json         (csr_values + per_cta overrides + axi)
 ```
 
 ## Kernels
@@ -54,7 +54,7 @@ JSON's `runtime._notes`.
 ## Build
 
 ```bash
-make            # build every kernel
+make            # build every kernel's .mem files (no dora, no VCS)
 make <kernel>   # build one (e.g. make gemm)
 make clean      # rm -rf build/
 make list       # show discovered kernels
@@ -62,12 +62,23 @@ make fill-writes # re-simulate every kernel and refresh axi.expected_writes in
                  # each kernels/<k>/*_test_vector.json (golden reference)
 ```
 
-Overrides:
+**The default `make all` only needs `python3`** — it consumes the committed
+`kernels/<k>/*.bin` files directly. No dora, no VCS, no extra deps.
+
+If you edit a FASM and want to regenerate the .bin, run the optional
+bitgen target instead — this one requires a dora checkout and a
+`workspace.pkl`:
 
 ```bash
-make DORA_REPO=/some/other/dora           # alternate dora checkout
-make WORKSPACE_PKL=/path/to/workspace.pkl # alternate dora workspace pickle
-make PYTHON=python3.12                    # alternate interpreter
+make regen-bins                            # rewrite kernels/<k>/*.bin from .fasm
+make regen-bins DORA_REPO=/path/to/dora    # point at a different dora checkout
+make regen-bins WORKSPACE_PKL=/path/to/workspace.pkl
+```
+
+Other overrides:
+
+```bash
+make PYTHON=python3.12                    # alternate interpreter (default flow)
 ```
 
 ## What each script does

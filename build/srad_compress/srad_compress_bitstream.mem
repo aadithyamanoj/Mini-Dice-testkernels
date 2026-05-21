@@ -2,7 +2,7 @@
 // Memory word width: 32 bits (4 bytes)
 // Bitstream payload size: 1074 bits
 // Chunks per bitstream: 34
-// Source bins: /data/amanoj3/Mini-Dice-testkernels/build/srad_compress
+// Source bins: kernels/srad_compress
 
 // pgraph[0] (comp_load_I): bitstream_addr=0x00000000, length=1221, base_word_addr=0x00000000
 @00000000 90000000

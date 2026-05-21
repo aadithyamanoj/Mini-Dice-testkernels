@@ -2,7 +2,7 @@
 // Memory word width: 32 bits (4 bytes)
 // Bitstream payload size: 1074 bits
 // Chunks per bitstream: 34
-// Source bins: /data/amanoj3/Mini-Dice-testkernels/build/gemm
+// Source bins: kernels/gemm
 
 // pgraph[0] (gemm_load_A_k0): bitstream_addr=0x00000000, length=821, base_word_addr=0x00000000
 @00000000 10000000
