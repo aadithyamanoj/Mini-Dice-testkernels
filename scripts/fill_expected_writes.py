@@ -194,8 +194,15 @@ def fill_one(kernel_name: str) -> None:
     num_ctas = max(grid_x, len(overrides), 1)
     writes = KERNEL_MODELS[kernel_name](csr0, overrides, num_ctas)
     runtime.setdefault("axi", {})["expected_writes"] = writes
-    jp.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n")
-    print(f"  {kernel_name:<14} -> {len(writes)} expected writes  ({jp})")
+    new_text = json.dumps(data, indent=2, sort_keys=True) + "\n"
+    # Only rewrite (and bump mtime) when the JSON content actually changed --
+    # otherwise make's mtime-based dependency tracking would spuriously
+    # rebuild every downstream .mem on every `make all`.
+    if jp.exists() and jp.read_text() == new_text:
+        print(f"  {kernel_name:<14} -> {len(writes)} expected writes  (unchanged)")
+        return
+    jp.write_text(new_text)
+    print(f"  {kernel_name:<14} -> {len(writes)} expected writes  (rewrote {jp.name})")
 
 
 def parse_args() -> argparse.Namespace:

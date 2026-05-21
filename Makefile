@@ -58,7 +58,13 @@ ALL_OUTPUTS := $(foreach k,$(KERNELS),$(call KERNEL_OUTPUTS,$(k)))
 .PHONY: all clean list fill-writes regen-bins $(KERNELS)
 .DELETE_ON_ERROR:
 
-all: $(ALL_OUTPUTS)
+# `make all` repopulates axi.expected_writes (for ALL CTAs in the grid)
+# before building any .mem. This guards against a stale or empty
+# axi.expected_writes -- e.g. after a CGRA-Solve mapper regen wiped the
+# JSON's runtime block -- silently producing a TB that "passes" after
+# only CTA 0's writes. fill-writes is pure-stdlib Python and idempotent;
+# if kernel semantics haven't changed the JSON content stays byte-identical.
+all: fill-writes $(ALL_OUTPUTS)
 
 list:
 	@echo "Discovered kernels:"

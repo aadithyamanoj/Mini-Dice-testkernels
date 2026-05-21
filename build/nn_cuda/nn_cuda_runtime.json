@@ -1,6 +1,327 @@
 {
   "axi": {
-    "expected_writes": []
+    "expected_writes": [
+      {
+        "addr": 128,
+        "data": 28297,
+        "strb": 3
+      },
+      {
+        "addr": 129,
+        "data": 27829,
+        "strb": 3
+      },
+      {
+        "addr": 130,
+        "data": 27365,
+        "strb": 3
+      },
+      {
+        "addr": 131,
+        "data": 26905,
+        "strb": 3
+      },
+      {
+        "addr": 132,
+        "data": 26449,
+        "strb": 3
+      },
+      {
+        "addr": 133,
+        "data": 25997,
+        "strb": 3
+      },
+      {
+        "addr": 134,
+        "data": 25549,
+        "strb": 3
+      },
+      {
+        "addr": 135,
+        "data": 25105,
+        "strb": 3
+      },
+      {
+        "addr": 136,
+        "data": 24665,
+        "strb": 3
+      },
+      {
+        "addr": 137,
+        "data": 24229,
+        "strb": 3
+      },
+      {
+        "addr": 138,
+        "data": 23797,
+        "strb": 3
+      },
+      {
+        "addr": 139,
+        "data": 23369,
+        "strb": 3
+      },
+      {
+        "addr": 140,
+        "data": 22945,
+        "strb": 3
+      },
+      {
+        "addr": 141,
+        "data": 22525,
+        "strb": 3
+      },
+      {
+        "addr": 142,
+        "data": 22109,
+        "strb": 3
+      },
+      {
+        "addr": 143,
+        "data": 21697,
+        "strb": 3
+      },
+      {
+        "addr": 144,
+        "data": 21289,
+        "strb": 3
+      },
+      {
+        "addr": 145,
+        "data": 20885,
+        "strb": 3
+      },
+      {
+        "addr": 146,
+        "data": 20485,
+        "strb": 3
+      },
+      {
+        "addr": 147,
+        "data": 20089,
+        "strb": 3
+      },
+      {
+        "addr": 148,
+        "data": 19697,
+        "strb": 3
+      },
+      {
+        "addr": 149,
+        "data": 19309,
+        "strb": 3
+      },
+      {
+        "addr": 150,
+        "data": 18925,
+        "strb": 3
+      },
+      {
+        "addr": 151,
+        "data": 18545,
+        "strb": 3
+      },
+      {
+        "addr": 152,
+        "data": 18169,
+        "strb": 3
+      },
+      {
+        "addr": 153,
+        "data": 17797,
+        "strb": 3
+      },
+      {
+        "addr": 154,
+        "data": 17429,
+        "strb": 3
+      },
+      {
+        "addr": 155,
+        "data": 17065,
+        "strb": 3
+      },
+      {
+        "addr": 156,
+        "data": 16705,
+        "strb": 3
+      },
+      {
+        "addr": 157,
+        "data": 16349,
+        "strb": 3
+      },
+      {
+        "addr": 158,
+        "data": 15997,
+        "strb": 3
+      },
+      {
+        "addr": 159,
+        "data": 15649,
+        "strb": 3
+      },
+      {
+        "addr": 160,
+        "data": 15305,
+        "strb": 3
+      },
+      {
+        "addr": 161,
+        "data": 14965,
+        "strb": 3
+      },
+      {
+        "addr": 162,
+        "data": 14629,
+        "strb": 3
+      },
+      {
+        "addr": 163,
+        "data": 14297,
+        "strb": 3
+      },
+      {
+        "addr": 164,
+        "data": 13969,
+        "strb": 3
+      },
+      {
+        "addr": 165,
+        "data": 13645,
+        "strb": 3
+      },
+      {
+        "addr": 166,
+        "data": 13325,
+        "strb": 3
+      },
+      {
+        "addr": 167,
+        "data": 13009,
+        "strb": 3
+      },
+      {
+        "addr": 168,
+        "data": 12697,
+        "strb": 3
+      },
+      {
+        "addr": 169,
+        "data": 12389,
+        "strb": 3
+      },
+      {
+        "addr": 170,
+        "data": 12085,
+        "strb": 3
+      },
+      {
+        "addr": 171,
+        "data": 11785,
+        "strb": 3
+      },
+      {
+        "addr": 172,
+        "data": 11489,
+        "strb": 3
+      },
+      {
+        "addr": 173,
+        "data": 11197,
+        "strb": 3
+      },
+      {
+        "addr": 174,
+        "data": 10909,
+        "strb": 3
+      },
+      {
+        "addr": 175,
+        "data": 10625,
+        "strb": 3
+      },
+      {
+        "addr": 176,
+        "data": 10345,
+        "strb": 3
+      },
+      {
+        "addr": 177,
+        "data": 10069,
+        "strb": 3
+      },
+      {
+        "addr": 178,
+        "data": 9797,
+        "strb": 3
+      },
+      {
+        "addr": 179,
+        "data": 9529,
+        "strb": 3
+      },
+      {
+        "addr": 180,
+        "data": 9265,
+        "strb": 3
+      },
+      {
+        "addr": 181,
+        "data": 9005,
+        "strb": 3
+      },
+      {
+        "addr": 182,
+        "data": 8749,
+        "strb": 3
+      },
+      {
+        "addr": 183,
+        "data": 8497,
+        "strb": 3
+      },
+      {
+        "addr": 184,
+        "data": 8249,
+        "strb": 3
+      },
+      {
+        "addr": 185,
+        "data": 8005,
+        "strb": 3
+      },
+      {
+        "addr": 186,
+        "data": 7765,
+        "strb": 3
+      },
+      {
+        "addr": 187,
+        "data": 7529,
+        "strb": 3
+      },
+      {
+        "addr": 188,
+        "data": 7297,
+        "strb": 3
+      },
+      {
+        "addr": 189,
+        "data": 7069,
+        "strb": 3
+      },
+      {
+        "addr": 190,
+        "data": 6845,
+        "strb": 3
+      },
+      {
+        "addr": 191,
+        "data": 6625,
+        "strb": 3
+      }
+    ]
   },
   "csr_values": {
     "csrX0": 1,
