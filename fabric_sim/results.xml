@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1779323838" />
-    <testcase name="probe_bin" classname="tb.test_bin_probe" file="/data/amanoj3/Mini-Dice-testkernels/fabric_sim/tb/test_bin_probe.py" lineno="153" time="0.18291735649108887" sim_time_ns="15670.0" ratio_time="85667.10289607423" />
+    <property name="random_seed" value="1779403474" />
+    <testcase name="probe_bin" classname="tb.test_bin_probe" file="/data/amanoj3/Mini-Dice-testkernels/fabric_sim/tb/test_bin_probe.py" lineno="153" time="0.1844639778137207" sim_time_ns="15670.0" ratio_time="84948.8349200851" />
   </testsuite>
 </testsuites>

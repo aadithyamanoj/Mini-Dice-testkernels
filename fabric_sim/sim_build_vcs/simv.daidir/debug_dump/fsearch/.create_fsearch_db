@@ -5,5 +5,5 @@ PYTHONPATH=/data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/pylib27
 export PYTHONPATH
 LD_LIBRARY_PATH=/data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib:/data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/pylib27
 export LD_LIBRARY_PATH
-/data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/bin/vcsfind_create_index.exe  -z  "/data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv.daidir/debug_dump/fsearch/./idents_PxRcoM.xml.gz" "/data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv.daidir/debug_dump/fsearch/./idents_tapi.xml.gz" -o "/data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
+/data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/bin/vcsfind_create_index.exe  -z  "/data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv.daidir/debug_dump/fsearch/./idents_O7mHT5.xml.gz" "/data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv.daidir/debug_dump/fsearch/./idents_tapi.xml.gz" -o "/data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
 \mv "/data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv.daidir/debug_dump/fsearch/fsearch.db_tmp" "/data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv.daidir/debug_dump/fsearch/fsearch.db"

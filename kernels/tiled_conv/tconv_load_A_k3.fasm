@@ -1,0 +1,24 @@
+# Dora CGRA FASM Configuration
+# dora_layout_hash: ca3046494f7e69ad4a83d3ff5c6edf078b66ca0eddecbdaa7352dea0a67897ab
+# Source: CGRA-Solve mapping
+# Compiler architecture: benchmarks/architectures/mini_dice_static/II_1/compiler_arch.json
+
+dice_array.pe_5_7.alu_inst[1:0] = 2'b00
+dice_array.pe_5_7.i_sw_alu_inst_A[1:0] = 2'b00
+dice_array.pe_5_7.i_sw_alu_inst_B[1:0] = 2'b01
+dice_array.pe_5_7.i_sw_pe_SE_o[1:0] = 2'b01
+dice_array.pe_7_7.alu_inst[1:0] = 2'b00
+dice_array.pe_7_7.i_sw_alu_inst_A[1:0] = 2'b00
+dice_array.pe_7_7.i_sw_alu_inst_B[1:0] = 2'b11
+dice_array.pe_7_7.i_sw_pe_SW_o[1:0] = 2'b01
+dice_array.sb_2_8.i_sw_xbar_tap_S_data_i[2:0] = 3'b001
+dice_array.sb_4_6.i_sw_xbar_tap_SE_data_i[2:0] = 3'b001
+dice_array.sb_4_8.i_sw_xbar_tap_SW_data_i[2:0] = 3'b000
+dice_array.sb_4_8.i_sw_xbar_tap_W_data_i[2:0] = 3'b001
+dice_array.sb_6_6.i_sw_xbar_tap_S_data_i[2:0] = 3'b001
+dice_array.sb_6_8.i_sw_xbar_tap_SW_data_i[2:0] = 3'b101
+dice_array.sb_6_8.i_sw_xbar_tap_W_data_i[2:0] = 3'b001
+dice_array.sb_8_6.i_sw_xbar_tap_NE_data_i[2:0] = 3'b000
+dice_array.sb_8_6.i_sw_xbar_tap_S_data_i[2:0] = 3'b100
+xbar_data_in_inst[49:0] = 50'b00000110001000010101000000000000000000000000000000
+xbar_mem_addr_inst[15:0] = 16'b0000000000001000

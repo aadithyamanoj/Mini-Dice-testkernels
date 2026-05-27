@@ -169,12 +169,12 @@ GIT_ASKPASS=/data/amanoj3/.vscode-server/.vscode-server/cli/servers/Stable-07258
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1312115/bus
 CSR_X7=0
 CSR_X6=0
-CSR_X5=1
-CSR_X4=1
-CSR_X3=1
-CSR_X2=256
-CSR_X1=128
-CSR_X0=1
+CSR_X5=192
+CSR_X4=128
+CSR_X3=64
+CSR_X2=528
+CSR_X1=272
+CSR_X0=16
 COREPACK_ENABLE_AUTO_PIN=0
 CONDA_SHLVL=0
 COLORTERM=truecolor
@@ -187,7 +187,7 @@ CLAUDECODE=1
 CDS_LIC_FILE=27006@cadencels.s.uw.edu
 BUNDLED_DEBUGPY_PATH=/data/amanoj3/.vscode-server/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy
 BITSTREAM_BITS=1074
-BIN_PATH=/data/amanoj3/Mini-Dice-testkernels/build/srad_srad2/srad2_store_I.bin
+BIN_PATH=/data/amanoj3/Mini-Dice-testkernels/kernels/tiled_conv/tconv_store_C.bin
 BASH_FUNC_which%%=() {  ( alias;
 BASH_FUNC_switchml%%=() {  typeset swfound=1;
 BASH_FUNC_scl%%=() {  if [ "$1" = "load" -o "$1" = "unload" ]; then
@@ -255,5 +255,5 @@ AI_AGENT=claude-code_2-1-145_agent
 1748748097 /data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/liberrorinf.so
 1748748087 /data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/libsnpsmalloc.so
 1748748085 /data/eda_tools/synopsys/tools/vcs/X-2025.06/linux64/lib/libvfs.so
-1779323838 /data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv.daidir
+1779403474 /data/amanoj3/Mini-Dice-testkernels/fabric_sim/sim_build_vcs/simv.daidir
 -1 partitionlib

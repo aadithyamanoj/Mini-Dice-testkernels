@@ -138,6 +138,30 @@ def model_nn_cuda(csr0, ov, num_ctas):
     return writes
 
 
+def model_conv2d(csr0, ov, num_ctas):
+    """3-tap 1D convolution (one pass of separable 2D conv).
+
+      out[i] = csrX2*input[i] + csrX3*input[i - csrX1] + csrX4*input[i + csrX1]
+
+    Per-thread: i = csrX0 + REGS0. Output written to csrX5 + REGS0.
+
+    The kernel JSON's `csrX1` defaults to a row-width-sized stride (vertical
+    pass); the same kernel can be relaunched with csrX1=1 for the horizontal
+    pass. Mock memory returns `addr & 0xFFFF` for every load.
+    """
+    writes = []
+    for cta in range(num_ctas):
+        c = effective_csrs(csr0, ov, cta)
+        for tid in range(NUM_THREADS):
+            in_c = axi_read(c["csrX0"] + tid)
+            in_m = axi_read(c["csrX0"] - c["csrX1"] + tid)
+            in_p = axi_read(c["csrX0"] + c["csrX1"] + tid)
+            out  = (in_c * c["csrX2"] + in_m * c["csrX3"] + in_p * c["csrX4"]) & DATA_MASK
+            writes.append({"addr": c["csrX5"] + tid,
+                           "data": out, "strb": STRB_FULL})
+    return writes
+
+
 def model_gemm(csr0, ov, num_ctas):
     """
     C[g] = sum_{k=0..3} A_packed[k,g] * B_packed[k,g]
@@ -161,7 +185,36 @@ def model_gemm(csr0, ov, num_ctas):
     return writes
 
 
+def model_tiled_conv(csr0, ov, num_ctas):
+    """One K-tile chunk of a tiled CNN convolution:
+
+        C[t] = (sum_{k=0..3} patch[k,t]*weight[k,t]  +  old_C[t])  & 0xFFFF
+
+    Same packed layout as gemm (csrX0=patch, csrX1=weight, csrX3/4/5 = k
+    offsets), but the store is a read-modify-write: the pre-existing C
+    value is loaded, the K-tile partial added, the sum written back. Under
+    the mock memory old_C = c_addr & 0xFFFF, so this exercises the real
+    load_C -> accum -> store_C path even for a single-tile run.
+    """
+    writes = []
+    for cta in range(num_ctas):
+        c = effective_csrs(csr0, ov, cta)
+        k_offset = [0, c["csrX3"], c["csrX4"], c["csrX5"]]
+        for tid in range(NUM_THREADS):
+            partial = 0
+            for k in range(4):
+                a = axi_read(c["csrX0"] + k_offset[k] + tid)
+                b = axi_read(c["csrX1"] + k_offset[k] + tid)
+                partial = (partial + a * b) & DATA_MASK
+            c_addr = c["csrX2"] + tid
+            new_c  = (partial + axi_read(c_addr)) & DATA_MASK
+            writes.append({"addr": c_addr, "data": new_c, "strb": STRB_FULL})
+    return writes
+
+
 KERNEL_MODELS: dict[str, Callable] = {
+    "conv2d":        model_conv2d,
+    "tiled_conv":    model_tiled_conv,
     "srad_prepare":  model_srad_prepare,
     "srad_extract":  model_srad_extract,
     "srad_compress": model_srad_compress,

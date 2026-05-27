@@ -1,0 +1,8 @@
+# Dora CGRA FASM Configuration
+# dora_layout_hash: ca3046494f7e69ad4a83d3ff5c6edf078b66ca0eddecbdaa7352dea0a67897ab
+# Source: CGRA-Solve mapping
+# Compiler architecture: benchmarks/architectures/mini_dice_static/II_1/compiler_arch.json
+
+dice_array.sb_8_8.i_sw_xbar_tap_S_data_i[2:0] = 3'b001
+xbar_data_in_inst[49:0] = 50'b00101000000000000000000000000000000000000000000000
+xbar_mem_addr_inst[15:0] = 16'b0000000000001001

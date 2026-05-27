@@ -43,6 +43,8 @@ MODULE_BASH  = Path("/usr/share/Modules/init/bash")
 KERNEL_CSRS = {
     "gemm":          {0: 16, 1: 272, 2: 528, 3: 64, 4: 128, 5: 192, 6: 0,   7: 0},
     "nn_cuda":       {0: 1,  1: 64,  2: 128, 3: 1,  4: 100, 5: 200, 6: 0,   7: 0},
+    "conv2d":        {0: 16, 1: 16,  2: 2,   3: 1,  4: 1,   5: 256, 6: 0,   7: 0},
+    "tiled_conv":    {0: 16, 1: 272, 2: 528, 3: 64, 4: 128, 5: 192, 6: 0,   7: 0},
     "srad_prepare":  {0: 1,  1: 128, 2: 256, 3: 1,  4: 1,   5: 1,   6: 0,   7: 0},
     "srad_extract":  {0: 1,  1: 128, 2: 256, 3: 1,  4: 1,   5: 1,   6: 0,   7: 0},
     "srad_compress": {0: 1,  1: 128, 2: 256, 3: 1,  4: 1,   5: 1,   6: 0,   7: 0},
@@ -99,6 +101,54 @@ STAGE_EXPECTATIONS = {
                           "formula": "R4 = R0 * R1 + R4"},
     "gemm_gen_C_addr":   {"kind": "store-addr",   "csr_base": 2, "out_reg": 5},
     "gemm_store_C":      {"kind": "store"},
+
+    # conv2D 3-tap-1D (= one pass of separable 2D conv).
+    # csrX0=16, csrX1=16 -> load_c reads mem[16+tid], load_m reads mem[tid]
+    # (zero in our mock since addr&0xFFFF = tid), load_p reads mem[32+tid].
+    # compute: R3 = csrX2*R0 + csrX3*R1 + csrX4*R2
+    #        = 2*(16+tid) + 1*tid + 1*(32+tid) = 64 + 4*tid
+    "conv_load_c":       {"kind": "load-affine",  "csr_base": 0, "port": 0},
+    # load_m and load_p mix csrX1 with csrX0; "load-affine" check would have
+    # to subtract/add csrX1 from the oracle, simpler to use load-nonzero.
+    "conv_load_m":       {"kind": "load-nonzero", "port": 0},
+    "conv_load_p":       {"kind": "load-nonzero", "port": 0},
+    # R3 = R0*csrX2 + R1*csrX3 + R2*csrX4. With probe stimulus R0=5, R1=3,
+    # R2=2 and the default csrX2=2, csrX3=1, csrX4=1:
+    # R3 = 5*2 + 3*1 + 2*1 = 15.
+    "conv_compute_3tap": {"kind": "compute-check", "in_r": {0: 5, 1: 3, 2: 2},
+                          "out_port": 3, "expected": 15,
+                          "formula": "R3 = csrX2*R0 + csrX3*R1 + csrX4*R2"},
+    "conv_gen_store_addr": {"kind": "store-addr", "csr_base": 5, "out_reg": 4},
+    "conv_store":        {"kind": "store"},
+
+    # tiled CNN conv -- one K-tile chunk. Same packed layout as gemm, plus a
+    # load_C -> accum -> store_C read-modify-write tail.
+    "tconv_load_A_k0":   {"kind": "load-affine",  "csr_base": 0, "port": 0},
+    "tconv_load_B_k0":   {"kind": "load-affine",  "csr_base": 1, "port": 0},
+    "tconv_load_A_k1":   {"kind": "load-nonzero", "port": 0},
+    "tconv_load_B_k1":   {"kind": "load-nonzero", "port": 0},
+    "tconv_load_A_k2":   {"kind": "load-nonzero", "port": 0},
+    "tconv_load_B_k2":   {"kind": "load-nonzero", "port": 0},
+    "tconv_load_A_k3":   {"kind": "load-nonzero", "port": 0},
+    "tconv_load_B_k3":   {"kind": "load-nonzero", "port": 0},
+    # R4 = R0 * R1. R0=3, R1=4 -> 12.
+    "tconv_mul_k0":      {"kind": "compute-check", "in_r": {0: 3, 1: 4},
+                          "out_port": 4, "expected": 12, "formula": "R4 = R0 * R1"},
+    # R4 = R0 * R1 + R4. R0=3, R1=4, R4=5 -> 17.
+    "tconv_mac_k1":      {"kind": "compute-check", "in_r": {0: 3, 1: 4, 4: 5},
+                          "out_port": 4, "expected": 17, "formula": "R4 = R0 * R1 + R4"},
+    "tconv_mac_k2":      {"kind": "compute-check", "in_r": {0: 3, 1: 4, 4: 5},
+                          "out_port": 4, "expected": 17, "formula": "R4 = R0 * R1 + R4"},
+    "tconv_mac_k3":      {"kind": "compute-check", "in_r": {0: 3, 1: 4, 4: 5},
+                          "out_port": 4, "expected": 17, "formula": "R4 = R0 * R1 + R4"},
+    "tconv_gen_C_addr":  {"kind": "store-addr",   "csr_base": 2, "out_reg": 5},
+    # load_C routes R5 -> MEM_ADDR0 (address from a GPR, not a CSR); pure
+    # routing, so no scalar oracle -- soft-checked like a store.
+    "tconv_load_C":      {"kind": "store"},
+    # R4 = R4 + R6. R4=5, R6=7 -> 12.
+    "tconv_accum":       {"kind": "compute-check", "in_r": {4: 5, 6: 7},
+                          "out_port": 4, "expected": 12, "formula": "R4 = R4 + R6"},
+    "tconv_store_C":     {"kind": "store"},
 
     # srad_prepare
     "prep_load_I":       {"kind": "load-affine",  "csr_base": 0, "port": 0},

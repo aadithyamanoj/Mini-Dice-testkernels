@@ -1,0 +1,629 @@
+{
+  "dice_cta_desc": {
+    "cta_id": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "kernel_desc": {
+      "grid_size": {
+        "x": 4,
+        "y": 1,
+        "z": 1
+      },
+      "kernel_id": 768,
+      "start_pc": 4096,
+      "thread_count": 16
+    }
+  },
+  "pgraph_metadata": [
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 0,
+        "bitstream_length": 821,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 3,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          0
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4096
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 512,
+        "bitstream_length": 1221,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 4,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          1
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4352
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 1024,
+        "bitstream_length": 1221,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 4,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          2
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4608
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 1536,
+        "bitstream_length": 2312,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 7,
+        "lat": 5,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 8,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 4864
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 2048,
+        "bitstream_length": 877,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 0
+        },
+        "in_regs_bitmap": 0,
+        "lat": 3,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 0,
+        "out_regs_bitmap": 16,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 5120
+    },
+    {
+      "meta": {
+        "barrier": 0,
+        "bitstream_addr": 2560,
+        "bitstream_length": 524,
+        "branch_meta": {
+          "branch_ena": 0,
+          "branch_jump_target_offset": 0,
+          "branch_neg_pred": 0,
+          "branch_pred_reg": 0,
+          "branch_reconv_offset": 0,
+          "branch_uni": 0,
+          "is_return": 1
+        },
+        "in_regs_bitmap": 24,
+        "lat": 1,
+        "ld_dest_regs": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "num_stores": 1,
+        "out_regs_bitmap": 0,
+        "parameter_load": 0,
+        "unrolling_factor": 0
+      },
+      "pc": 5376
+    }
+  ],
+  "runtime": {
+    "_notes": [
+      "conv2D separable: this kernel is ONE 3-tap 1D conv pass; run it twice (vertical with csrX1=row_width, then horizontal with csrX1=1) for full separable 2D conv. This JSON defaults to the VERTICAL pass.",
+      "4 CTAs * 16 threads = 64 output elements/pass.",
+      "Input layout: 6 rows x 16 cols (top/bot zero-pad), base=mem[0].",
+      "Output layout: 4 rows x 16 cols, base=mem[256].",
+      "Per-CTA c shifts csrX0 (center row) and csrX5 (output row) by 16 (= one row).",
+      "Weights: csrX2=w_c, csrX3=w_minus, csrX4=w_plus (broadcast across CTAs)."
+    ],
+    "axi": {
+      "expected_writes": [
+        {
+          "addr": 256,
+          "data": 64,
+          "strb": 3
+        },
+        {
+          "addr": 257,
+          "data": 68,
+          "strb": 3
+        },
+        {
+          "addr": 258,
+          "data": 72,
+          "strb": 3
+        },
+        {
+          "addr": 259,
+          "data": 76,
+          "strb": 3
+        },
+        {
+          "addr": 260,
+          "data": 80,
+          "strb": 3
+        },
+        {
+          "addr": 261,
+          "data": 84,
+          "strb": 3
+        },
+        {
+          "addr": 262,
+          "data": 88,
+          "strb": 3
+        },
+        {
+          "addr": 263,
+          "data": 92,
+          "strb": 3
+        },
+        {
+          "addr": 264,
+          "data": 96,
+          "strb": 3
+        },
+        {
+          "addr": 265,
+          "data": 100,
+          "strb": 3
+        },
+        {
+          "addr": 266,
+          "data": 104,
+          "strb": 3
+        },
+        {
+          "addr": 267,
+          "data": 108,
+          "strb": 3
+        },
+        {
+          "addr": 268,
+          "data": 112,
+          "strb": 3
+        },
+        {
+          "addr": 269,
+          "data": 116,
+          "strb": 3
+        },
+        {
+          "addr": 270,
+          "data": 120,
+          "strb": 3
+        },
+        {
+          "addr": 271,
+          "data": 124,
+          "strb": 3
+        },
+        {
+          "addr": 272,
+          "data": 128,
+          "strb": 3
+        },
+        {
+          "addr": 273,
+          "data": 132,
+          "strb": 3
+        },
+        {
+          "addr": 274,
+          "data": 136,
+          "strb": 3
+        },
+        {
+          "addr": 275,
+          "data": 140,
+          "strb": 3
+        },
+        {
+          "addr": 276,
+          "data": 144,
+          "strb": 3
+        },
+        {
+          "addr": 277,
+          "data": 148,
+          "strb": 3
+        },
+        {
+          "addr": 278,
+          "data": 152,
+          "strb": 3
+        },
+        {
+          "addr": 279,
+          "data": 156,
+          "strb": 3
+        },
+        {
+          "addr": 280,
+          "data": 160,
+          "strb": 3
+        },
+        {
+          "addr": 281,
+          "data": 164,
+          "strb": 3
+        },
+        {
+          "addr": 282,
+          "data": 168,
+          "strb": 3
+        },
+        {
+          "addr": 283,
+          "data": 172,
+          "strb": 3
+        },
+        {
+          "addr": 284,
+          "data": 176,
+          "strb": 3
+        },
+        {
+          "addr": 285,
+          "data": 180,
+          "strb": 3
+        },
+        {
+          "addr": 286,
+          "data": 184,
+          "strb": 3
+        },
+        {
+          "addr": 287,
+          "data": 188,
+          "strb": 3
+        },
+        {
+          "addr": 288,
+          "data": 192,
+          "strb": 3
+        },
+        {
+          "addr": 289,
+          "data": 196,
+          "strb": 3
+        },
+        {
+          "addr": 290,
+          "data": 200,
+          "strb": 3
+        },
+        {
+          "addr": 291,
+          "data": 204,
+          "strb": 3
+        },
+        {
+          "addr": 292,
+          "data": 208,
+          "strb": 3
+        },
+        {
+          "addr": 293,
+          "data": 212,
+          "strb": 3
+        },
+        {
+          "addr": 294,
+          "data": 216,
+          "strb": 3
+        },
+        {
+          "addr": 295,
+          "data": 220,
+          "strb": 3
+        },
+        {
+          "addr": 296,
+          "data": 224,
+          "strb": 3
+        },
+        {
+          "addr": 297,
+          "data": 228,
+          "strb": 3
+        },
+        {
+          "addr": 298,
+          "data": 232,
+          "strb": 3
+        },
+        {
+          "addr": 299,
+          "data": 236,
+          "strb": 3
+        },
+        {
+          "addr": 300,
+          "data": 240,
+          "strb": 3
+        },
+        {
+          "addr": 301,
+          "data": 244,
+          "strb": 3
+        },
+        {
+          "addr": 302,
+          "data": 248,
+          "strb": 3
+        },
+        {
+          "addr": 303,
+          "data": 252,
+          "strb": 3
+        },
+        {
+          "addr": 304,
+          "data": 256,
+          "strb": 3
+        },
+        {
+          "addr": 305,
+          "data": 260,
+          "strb": 3
+        },
+        {
+          "addr": 306,
+          "data": 264,
+          "strb": 3
+        },
+        {
+          "addr": 307,
+          "data": 268,
+          "strb": 3
+        },
+        {
+          "addr": 308,
+          "data": 272,
+          "strb": 3
+        },
+        {
+          "addr": 309,
+          "data": 276,
+          "strb": 3
+        },
+        {
+          "addr": 310,
+          "data": 280,
+          "strb": 3
+        },
+        {
+          "addr": 311,
+          "data": 284,
+          "strb": 3
+        },
+        {
+          "addr": 312,
+          "data": 288,
+          "strb": 3
+        },
+        {
+          "addr": 313,
+          "data": 292,
+          "strb": 3
+        },
+        {
+          "addr": 314,
+          "data": 296,
+          "strb": 3
+        },
+        {
+          "addr": 315,
+          "data": 300,
+          "strb": 3
+        },
+        {
+          "addr": 316,
+          "data": 304,
+          "strb": 3
+        },
+        {
+          "addr": 317,
+          "data": 308,
+          "strb": 3
+        },
+        {
+          "addr": 318,
+          "data": 312,
+          "strb": 3
+        },
+        {
+          "addr": 319,
+          "data": 316,
+          "strb": 3
+        }
+      ]
+    },
+    "csr_values": {
+      "csrX0": 16,
+      "csrX1": 16,
+      "csrX2": 2,
+      "csrX3": 1,
+      "csrX4": 1,
+      "csrX5": 256,
+      "csrX6": 0,
+      "csrX7": 0
+    },
+    "per_cta_csr_overrides": [
+      {
+        "csr_values": {
+          "csrX0": 16,
+          "csrX5": 256
+        },
+        "cta_id": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "csr_values": {
+          "csrX0": 32,
+          "csrX5": 272
+        },
+        "cta_id": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "csr_values": {
+          "csrX0": 48,
+          "csrX5": 288
+        },
+        "cta_id": {
+          "x": 2,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "csr_values": {
+          "csrX0": 64,
+          "csrX5": 304
+        },
+        "cta_id": {
+          "x": 3,
+          "y": 0,
+          "z": 0
+        }
+      }
+    ]
+  },
+  "stage_artifacts": [
+    {
+      "fasm_path": "conv_load_c.fasm",
+      "kernel": "conv_load_c",
+      "notes": [
+        "addr = csrX0 + REGS0. LDST writes input[i] to R0."
+      ]
+    },
+    {
+      "fasm_path": "conv_load_m.fasm",
+      "kernel": "conv_load_m",
+      "notes": [
+        "addr = csrX0 - csrX1 + REGS0. LDST writes input[i-stride] to R1."
+      ]
+    },
+    {
+      "fasm_path": "conv_load_p.fasm",
+      "kernel": "conv_load_p",
+      "notes": [
+        "addr = csrX0 + csrX1 + REGS0. LDST writes input[i+stride] to R2."
+      ]
+    },
+    {
+      "fasm_path": "conv_compute_3tap.fasm",
+      "kernel": "conv_compute_3tap",
+      "notes": [
+        "R3 = R0*csrX2 + R1*csrX3 + R2*csrX4 (3-tap weighted sum)."
+      ]
+    },
+    {
+      "fasm_path": "conv_gen_store_addr.fasm",
+      "kernel": "conv_gen_store_addr",
+      "notes": [
+        "R4 = csrX5 + REGS0 (per-thread output address)."
+      ]
+    },
+    {
+      "fasm_path": "conv_store.fasm",
+      "kernel": "conv_store",
+      "notes": [
+        "mem[R4] = R3 (one store per thread)."
+      ]
+    }
+  ]
+}
